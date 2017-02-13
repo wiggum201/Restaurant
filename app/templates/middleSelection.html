@@ -1,0 +1,65 @@
+
+
+<div class="middle-section-wrapper">    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="mini-slider-id" class="mini-slider">
+                    <img class="item" src="app/assets/images/slides/minSlide1.jpg" alt="">                    
+                    <img class="item" src="app/assets/images/slides/minSlide2.jpg" alt="">                    
+                    <img class="item" src="app/assets/images/slides/minSlide3.jpg" alt="">                    
+                </div>
+                <ingredients-component></ingredients-component>
+            </div>
+            <div class="col-sm-6">
+                <div class="meals-intro">
+                    <h2>AMAZING MEALS <span class="red-color">& </span> <br /> <span class="title-bold">GREAT ENTERTAINMENT</span></h2>
+                    <span>We hope to see you soon!</span>
+                    
+                    <p>Lorem ipsum dolor sit amet, <span class="red-word">consectetuer</span> adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+
+                    Venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                    <section>Nulla consequat massa quis enim. Doncus ut, imperdiet a.</section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="kitchen-staff">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<img src="app/assets/images/chefs.jpg" alt="">-->
+                <div class="chefs-tag">
+                    <h1><span class="kitchen">KITCHEN</span> TEAM</h1>
+                    <section>Award winning meals, delivered by an amazing team</section>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="chef-bio-tag">
+
+
+                <div  *ngFor="#chef of chefsObject" class="col-md-3">
+                    <h1>{{chef.firstName}} <span class="bold-text">{{chef.lastName}}</span></h1>
+                    <h2>{{chef.position}}</h2>
+                    <p>{{chef.bio}}</p>
+                </div>                       
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="info"></div>
+
+
+
+

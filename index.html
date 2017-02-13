@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+  
+    <title>Restaurant Website</title>
+    <!--specify wherer file starts-->
+    <base href="/">
+    <!--requred angular modules/bundles must be loaded first to be able to use angular 2. needed to be able to bootstrap application-->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!--load router module for router purposes-->
+    <!--uses providers on main.html and main.ts-->
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <!--load http module/bundle to enable xhr requests to server(internal or external)-->
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> PLUGin doesn't support newest version of jquery-->
+
+
+
+     
+
+    <link href="style.css" rel="stylesheet">
+    <!--css for smooth scrollbar-->
+    <!--<link rel="stylesheet" href="dist/smooth-scrollbar.css">-->
+    <script src="system.config.js"></script>
+</head>
+
+
+<body>
+    <app>
+      <!--from style.css-->
+      <div class="restaurant-preloader-holder">
+        <!--from preloader.css-->
+        <div class="preloaderMedium"></div>
+      </div>
+    </app>
+
+  
+</body>
+
+</html>

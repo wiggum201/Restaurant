@@ -1,0 +1,259 @@
+.menu-of-day{
+    width:100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 1.5em 0 1.5em 25em;
+    box-sizing: border-box;
+}
+
+.menu-of-day div.menu-details-wrapper{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    float: left;
+    display: block;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 0 1em 0 0;
+}
+
+.menu-of-day div.menu-details-wrapper:hover{
+    background-color: #ebe8e2;
+    
+    
+}
+
+.menu-of-day div.menu-details-wrapper div.pic-and-description{
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    display: block;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 0 0 60px;
+}
+
+.menu-of-day div.menu-details-wrapper div.pic-and-description img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:1em;
+    left:0;
+    
+}
+
+
+.menu-of-day h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: #382410;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.menu-of-day h1 span.thin-text {
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu-of-day img{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.menu-of-day h2{
+    font-size: 1.2em;
+}
+
+.menu-of-day col-sm-1{
+    background-color: #ebe8e2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.breakfast{
+    width:100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 1.5em 0 1.5em 0em;
+    
+    
+}
+
+
+
+.breakfast div.menu-item-wrapper{
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left; 
+    box-sizing: border-box;   
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 0 1em 0.5em 1em ;
+    margin-right: 2em;
+    
+}
+
+
+
+.breakfast div.menu-item-wrapper:hover{
+    background-color: #ebe8e2;
+}
+
+
+
+.breakfast h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: #382410;
+    text-align: center;
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+}
+
+.breakfast h1 span.thin-text {
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu-item-wrapper h2{
+    font-size: 1.2em;
+}
+
+.menu-item-wrapper h6{
+    text-align: right;
+    font-size: 1.2em;
+}
+
+
+
+
+.lunch-time{
+    width:100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 1.5em 0 1.5em 0em;
+}
+.lunch-time h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: #382410;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+.lunch-time h1 span.thin-text {
+    font-family: 'Raleway', sans-serif;
+}
+
+.lunch-time div.lunch-item-wrapper-left{
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left; 
+    box-sizing: border-box;   
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 0 1em 0 0;
+   
+    
+}
+
+.lunch-time div.lunch-item-wrapper-right{
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left; 
+    box-sizing: border-box;   
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 0 1em 0 0;
+}
+
+.lunch-item-wrapper-left h2{
+    font-size: 1.2em;
+}
+
+.lunch-item-wrapper-right h2{
+    font-size: 1.2em;
+}
+
+.lunch-item-wrapper-left div.col-sm-1{
+    text-align: right;
+}
+
+.lunch-item-wrapper-right div.col-sm-1{
+    text-align: right;
+} 
+
+
+.soft-drink{
+    width:100%;
+    float: left;
+    height: auto;
+    display: block;
+}
+
+.soft-drink div.menu-item-wrapper{
+    width:100%;
+    height: auto;
+    float: left;
+    display: block;
+}
+
+
+
+.wine-selection, .soft-drink{
+    width:100%;
+    height: auto;
+    display: block;
+    float: left;
+    margin: 1.5em 0 1.5em 0em;
+}
+
+.wine-selection h1, .soft-drink h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: #382410;
+    text-align: center;
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+}
+
+.wine-selection h1 span.thin-text, .soft-drink h1 span.thin-text {
+    font-family: 'Raleway', sans-serif;
+}
+
+.wine-selection div.menu-item-wrapper, .soft-drink div.menu-item-wrapper{
+    width:100%;
+    height: auto;
+    float: left;
+    display: block;
+    box-sizing: border-box;   
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 0 1em 0 0;
+}
+
+.wine-selection div.menu-item-wrapper:hover, .soft-drink div.menu-item-wrapper:hover{
+    background-color: #ebe8e2;
+}
+

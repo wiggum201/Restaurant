@@ -1,0 +1,40 @@
+<restaurant-header [headerVars]="pageHeaderVars"></restaurant-header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Template Driven Form</h3>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="#student of allStudents" class="student-detail">
+            <div class="col-sm-6">
+                {{student.name}}
+            </div>
+            <div class="col-sm-6">
+                Age: {{student.age}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <form id="contact-form" class="restaurant-form" (ngSubmit)="btnSendForm(formData.value)" #formData="ngForm" >
+            <div class="col-sm-6">
+                <input type="text" ngControl='visitorName' placeholder="Enter your full name" />
+            </div>
+            <div class="col-sm-6">
+                <input type="number" ngControl='visitorAge' placeholder="Enter your age" />
+            </div>
+            <div class="col-sm-12">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<restaurant-footer></restaurant-footer>

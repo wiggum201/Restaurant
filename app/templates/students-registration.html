@@ -1,0 +1,68 @@
+<restaurant-header [headerVars]="pageHeaderVars"></restaurant-header>
+
+<div class="container">
+    <div class="row">
+       <div class="col-sm-6">
+           <h3>REGISTER NEW STUDENT</h3>
+           <div class="row">
+                <!--[ngFormModel] communicates with Control Group in component-->
+                <!--ngSubmit is used to send information-->
+                <!--processRegistrationForm(newRegistrationFormInstance) newRegistrationFormInstance is object, we only want values -->
+                <form class="restaurant-form" [ngFormModel]="newRegistrationFormInstance" (ngSubmit)="processRegistrationForm(newRegistrationFormInstance.value)">
+                    <div class="col-sm-12">
+                        <input type="text" ngControl="fName" placeholder="Enter student first name." pattern="[A-Za-z]{3}" />
+                        <input type="text" ngControl="mName" placeholder="Enter student middle name." />
+                        <input type="text" ngControl="lName" placeholder="Enter student last name." />
+                        <input type="number" ngControl="age" placeholder="Enter student's age." min="0" max="10"/>
+                        <!--changes the button value to either edit or register-->
+                        <button type="submit">{{(formEditStatus)? "EDIT":"REGISTER"}}</button>                    
+                        
+                    </div>
+                </form>
+           </div>
+       </div>
+       <div class="col-sm-6">
+           <h3>ALL REGISTERED STUDENTS</h3>
+           <span class="message error" *ngIf="isStudentRegistryEmpty">
+               Sorry there were no students found.
+           </span>
+           <ol>
+               <div *ngFor="#student of receivedStudentRegistrationCommand">                                      
+                        <li *ngIf="student.visibility">
+                            First Name: {{student.fName}}, Middle Name: {{student.mName}}, LastName: {{student.lName}}, age:{{student.age}}
+                            <button (click)="editStudentDetails(student.id)">Edit</button>
+                            <button (click)="processDeleteBtn(student.id)">Delete</button>  
+                        </li>
+               </div>
+                
+           </ol>
+
+                <div class="confirmation-message" *ngIf="showConfirmationDialog">
+                    <p>Are you sure you want to delete your registration information.</p>
+                    <button class="confirm" (click)="btnClickDeleteConfirmDialogBox(true,selectedStudentID)">YES</button>
+                    <button class="cancel" (click)="btnClickDeleteConfirmDialogBox(false)">NO</button>
+                </div>
+             
+                <div class="dialog" *ngIf="showRestoreDialog">
+                    <p>Student by ID: {{selectedStudentID}} has been deleted successfully</p>
+                    <button class="restore" (click)="btnClickRestoreStudent(selectedStudentID)">RESTORE STUDENT</button>
+                    <button class="ignore" (click)="btnClickIgnore()">IGNORE</button>
+                </div>
+
+
+                
+
+       </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <!--SIMPLE UI CALCULATOR INVOLVING DATA UPDATING VIA SERVICE & COMPONENTS-->
+                <ui-calculator></ui-calculator>
+                <!--SIMPLE UI CALCULATOR INVOLVING DATA UPDATING VIA SERVICE & COMPONENTS-->
+</div>
+
+
+
+<restaurant-footer></restaurant-footer>

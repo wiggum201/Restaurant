@@ -1,0 +1,29 @@
+<nav class="nav-holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="logo">
+                        <img src="app/assets/images/slices/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <ul  class="main-navigation">
+
+                        <li *ngFor="#nav of navigation"><a class="{{ ( !nav.active ) ? null : 'current' }}" href="{{nav.link}}">{{nav.title}}</a></li>
+                        
+                    </ul>
+                     <ul class="special-links">
+                        <li *ngFor="#specialLink of specialLinksObject"><a href="{{specialLink.link}}" class="">{{specialLink.title}}</a></li> 
+
+                    </ul>  
+                    <ul class="social-media-links">
+                        <li *ngFor="#socMediaLnk of socialMediaLinks"><a href="" target="" src=""><i class="fa fa-{{socMediaLnk.icon}}" aria-hidden="false"></i></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    

@@ -1,0 +1,101 @@
+.about-us-description, .place-to-wine-description{
+    width:100%;
+    height: auto;
+    display: block;
+    float: left;
+}
+
+.about-us-description h1, .place-to-wine-description h1{
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    
+}
+
+.about-us-description h1 span.thin-text, .place-to-wine-description h1 span.thin-text{
+    font-weight: normal;    
+}
+
+.about-us-description h2, .place-to-wine-description h2{
+    font-size: 1.2em;
+}
+
+.about-us-description p, .place-to-wine-description p{
+    font-size: 1em;
+}
+
+.about-us-description p span.change-font, .place-to-wine-description p span.change-font{
+    color: #c3512f;
+    font-weight: bold;
+}
+
+
+
+
+.photograph{
+    width:100%;
+    height: auto;
+    float: left;
+    display: block;
+}
+
+.photograph .picture{
+    width:100%;
+    height: auto;
+    float: left;
+    display: block;
+    padding:0;
+    margin:0;
+    cursor: pointer;
+}
+
+.photograph .pciture:hover{
+    transform: scale(1.05,1.05);
+    cursor: pointer;
+}
+
+
+
+
+.bootstrap-strap-padless-column{
+    padding:0;
+    margin:0;
+}
+
+.gallery-photo-holder{
+    width:100%;
+    height: auto;
+    float: left;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.galler-photo-img{
+    width: 100%;
+    height: auto;
+
+}
+
+.gallery-photo-caption{
+    width:100%;
+    height: auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: rgba(193, 66, 66, 0.7);
+    color: #fff;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: 0.5s;
+    
+
+    /*opacity: 0.4; */
+
+}
+
+.galler-photo-img:hover ~ .gallery-photo-caption {
+    bottom: 0;
+    transition: 0.5s;
+}

@@ -1,0 +1,543 @@
+@import url( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+@import url( 'app/assets/plugins/bootstrap/bootstrap-datepicker.min.css');
+@import url( 'app/assets/plugins/bootstrap/bootstrap-timepicker.min.css');
+@import url( 'app/assets/styles/fontawesome/css/font-awesome.min.css');
+@import url( 'app/assets/styles/preloaders.css');
+
+/*OWL STYLES*/
+@import url( 'app/assets/plugins/owl/css/owl.carousel.css');
+@import url('app/assets/plugins/owl/css/owl.theme.css');
+@import url('app/assets/plugins/owl/css/owl.transitions.css');
+
+
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script');
+
+
+/*Overwriting datepicker css*/
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled] {
+     background-color: #382410; 
+}
+.datepicker table tr td.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active:hover {
+     background-color: #382410; 
+    background-image: -moz-linear-gradient(to bottom,#382410,#382410);
+    background-image: -ms-linear-gradient(to bottom,#382410,#382410);
+     background-image: -webkit-gradient(linear,0 0,0 100%,from(#382410),to(#382410)); 
+    background-image: -webkit-linear-gradient(to bottom,#382410,#382410);
+    background-image: -o-linear-gradient(to bottom,#382410,#382410);
+     background-image: linear-gradient(to bottom,#382410,#382410); 
+     background-repeat: repeat-x; 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#382410', endColorstr='#0044cc', GradientType=0);
+     border-color: #382410 #382410 #382410; 
+     border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25); 
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+     color: #fff; 
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+}
+
+img{
+  max-width:100%;
+  height: auto;
+    width: auto\9; / ie8 /
+}
+
+
+th {
+    text-align: left;
+    color: #382410;
+}
+
+
+div.input-group bootstrap-timepicker timepicker {
+   background: red;
+}
+
+.container{
+    max-width: 1366px;
+    width: 100%;
+}
+
+
+/*main-theme-color: #7c6853*/
+
+.restaurant-preloader-holder{
+    width:auto;
+    height: auto;
+    display: table;
+    margin: 20% auto 0 auto;
+
+
+}
+
+.meals-intro{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    
+}
+
+.meals-intro h2{
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.meals-intro h2 span.red-color{
+  color: #c3512f;
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: bold;
+
+}
+
+.meals-intro h2 span.title-bold{
+  font-weight: bold;
+  
+}
+
+.meals-intro span{
+    
+}
+
+
+.meals-intro p{
+    
+}
+
+.meals-intro p span.red-word{
+    color: #c3512f;
+}
+
+.meals-intro section{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    border-left: 7px solid #c3512f;
+    padding: 0.5em 0 0.5em 2em;
+    box-sizing: border-box;
+    margin: 1em 0;
+    font-size: 1.3em;
+    color: #9C9288;
+    
+    
+}
+.middle-section-wrapper{
+    margin: 5em 0;
+}
+
+.mini-slider{
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+
+}
+
+.mini-slider img{
+    border-radius: 0.2em;
+}
+
+.ingredients-holder{
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 4em 0;
+}
+.ingredients-holder div.ingredients-img-holder{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    position: relative;
+    margin: 0 0 1em 0; 
+
+}
+
+.ingredients-holder div.ingredients-img-holder img{
+    border-radius: 0.2em;
+    }
+
+.ingredients-holder div.ingredient-content-holder{
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+}
+.ingredients-holder div.ingredient-content-holder h4{
+    color: #382410;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    position: relative;
+    padding: 0 0 0 2em;
+    box-sizing: border-box;
+}
+
+.ingredients-holder div.ingredient-content-holder h4:before{
+    font-family: 'FontAwesome';
+    content: "\f005";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ingredients-holder div.ingredient-content-holder p{
+    text-align: left;
+}
+
+.ingedient-hidden-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left:0;
+    background-color: rgba(56, 36, 16, 0);
+    opacity: 0;
+
+}
+
+.ingedient-hidden-wrapper a{
+    text-align: center;
+    margin-top: 30%;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: bold;
+    
+}
+
+.ingredients-img-holder:hover > .ingedient-hidden-wrapper{
+    background-color: rgba(56, 36, 16, 0.5);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.kitchen-staff{
+    width:100%;
+    height: auto;
+    padding: 15em 0;
+    background-color: #2b2822;
+    color: #fff;
+    background-attachment: fixed;background-image: url(/app/assets/images/chefs.jpg);background-repeat: no-repeat;background-position: left;background-size: cover;-webkit-background-size: cover;  -moz-background-size: cover;  -o-background-size: cover;
+    
+}
+
+div.chefs-tag{
+    padding: 0 0 0 10em;
+     color: #0a0202;
+}
+
+div.chefs-tag h1{
+   
+    font-weight: bold;
+    font-size: 4em;
+    
+
+}
+
+div.chefs-tag h1 span.kitchen{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+
+}
+
+.kitchen-staff section{
+    font-size: 1.3em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.chef-bio-tag{
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    color: #0a0202;
+    font-family: 'Raleway', sans-serif;
+    margin:0;
+    padding: 5em 0;
+    
+}
+.chef-bio-tag h1{
+    font-size: 1.5em;
+    margin-bottom: 0;  
+}
+
+.chef-bio-tag h1 span.bold-text{
+    font-weight: bold;
+}
+
+.chef-bio-tag h2{
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+.chef-bio-tag p span.red-text{
+    color: #c3512f;
+    font-weight: bold;
+
+}
+
+
+.common-page-header-holder{
+    width:100%;
+    height: auto;
+    color: #ebe8e2;
+    min-height: 300px;
+    display: block;
+    float: left;
+    background-color: #2b2822;
+    position: relative;
+    background-attachment: fixed;background-repeat: no-repeat;background-position: left;background-size: cover;-webkit-background-size: cover;  -moz-background-size: cover;  -o-background-size: cover;
+}
+
+.text-position-wrapper{
+    display: block;
+    margin-top: 10em;
+    width:auto;
+    height: auto;
+    z-index: 100;
+    float: left;
+}
+.common-page-header-holder h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4em;
+    font-weight: thin;
+    text-transform: uppercase;
+    
+
+}
+
+.common-page-header-holder h1 span.and-sign{
+    
+    font-family: 'Petit Formal Script', cursive;
+}
+
+.common-page-header-holder section{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+form.restaurant-form {
+    width:100%;
+    height: auto;
+    display: block; 
+    padding: 0;
+    margin: 2em 0;
+    box-sizing: border-box;
+    float: left;
+}
+form.restaurant-form input[type="text"], form.restaurant-form input[type="email"], form.restaurant-form input[type="number"],form.restaurant-form select, form.restaurant-form textarea {
+    width: 100%;
+    height: 50px;
+    float: left;
+    display: block;
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    margin: 0 0 2em 0;
+}
+
+form.restaurant-form textarea{
+    height: 150px;
+    
+}
+
+form.restaurant-form button{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    border: none;
+    padding: 1em 0;
+    box-sizing: border-box;
+    background-color: #382410;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+form.restaurant-form button:disabled{
+    background-color: #bbb;
+    transition: 0.5s;
+    cursor: not-allowed;
+
+}
+form.restaurant-form span.error{
+    width:100%;
+    display: block;
+    float: left;
+    height: auto;
+    background-color: #be1616;
+    color: #fff;
+    padding: 1em;
+    box-sizing: border-box;
+    margin: 0 0 1em 0;
+    position: relative;
+}
+
+form.restaurant-form span.error:before{
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #be1616;
+  position: absolute;
+  top:-13px;
+  left:0;
+  display:block;
+  content: " ";
+} 
+
+
+.student-detail {width:100%;height:auto;float:left;display:block;margin:0 0 0.2em 0; padding:0.5em;box-sizing:border-box;background-color:#333;color:#fff;}
+
+.single-reservation {
+    width: 100%;
+    float: left;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.single-reservation  h4{
+    width: 100%;
+    height: auto;
+    background-color: #382410;
+    color: #fff;
+    padding: 0.5em 0;
+    text-align: center;
+    margin: 0;
+}
+
+.single-reservation div.reservation-date-time, .single-reservation div.reservation-seat-table{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    padding: 0.5em;
+    box-sizing: border-box;
+    
+}
+
+.single-reservation div.reservation-date-time span, .single-reservation div.reservation-seat-table span{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin: 0 2em 0.5em 0;
+
+} 
+.single-reservation div.reservation-date-time span i{
+    margin: 0 0.5em 0 0;
+}
+
+.single-reservation div.reservation-actions{
+        width:100%;
+        height: auto;
+        float: left;
+        display: block;    
+}
+
+.single-reservation div.reservation-actions button{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0 1em 0.5em 0;
+    border-radius: 0.5em;
+    
+}
+.single-reservation div.reservation-actions button.edit{
+    background-color: #382410;
+
+}
+
+.single-reservation div.reservation-actions button.delete{
+    background-color: #f00;
+    
+}
+
+.single-reservation div.reservation-actions button:hover{
+    opacity: 0.8;
+    
+}
+
+.confirm-delete-dialog-box{
+    width:auto;
+    height: auto;
+    float: left;
+    display: none;
+    background-color: #c3512f;
+    position: relative;
+    margin: 0.5em 0;
+    padding: 0.5em;
+}
+.confirm-delete-dialog-box button{
+     width: auto;
+    height: auto;
+    display: inline-block;
+    border: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0 1em 0.5em 0;
+    border-radius: 0.5em;
+}
+
+
+
+div.dialog, div.confirmation-message{
+    width:100%;
+    height: auto;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    background-color: #382410;
+    padding: 1em;
+    color: #fff;
+
+
+}
+div.dialog button, div.confirmation-message button{
+    width: auto;
+    height: auto;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    color: #fff;
+}
+div.dialog button.restore, div.confirmation-message button.confirm{
+    background-color: #0f0;
+}
+div.dialog button.ignore, div.confirmation-message button.cancel{
+    background-color: #f00;
+}
+
+
+.ui-calculator-holder {width:100%;height:auto;float: left;display:block;margin:1em 0;}
+.ui-calculator-holder input {width:200px;height:50px;border:1px solid #382410;padding:0.5em;border-radius: 0.5em;float:left;clear:left;}
+.ui-calculator-holder button {width:auto;height:auto;display:inline-block;margin:1em 1em 0 0;padding:1em 1em;border-radius: 0.5em;color:#fff;}
+.ui-calculator-holder button.add {background-color: #c3512f;}
+.ui-calculator-holder button.sub {background-color: #be1616;}
+
+
+.single-booking{
+    width:auto;
+    height: auto;
+    float: left;
+    display: block;
+    clear: left;
+    border: 1px solid #ddd;
+    margin: 0 0 1em 0;
+}

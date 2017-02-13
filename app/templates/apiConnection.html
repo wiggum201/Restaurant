@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form *ngIf="!inEditMode" id="api-form" class=booking-form (ngSubmit)="btnSendForm(formData.value)" #formData="ngForm" >
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input type="text" ngControl="id" placeholder="Enter ID">
+                        <br>
+                        <span *ngIf="( formErrors.id ) && formErrors.id.status">{{formErrors.id.msg}}</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" ngControl="date" placeholder="Enter date">
+                        <br>
+                        <span *ngIf="( formErrors.date ) && formErrors.date.status">{{formErrors.date.msg}}</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" ngControl="name" placeholder="Enter name">
+                        <br>
+                        <span *ngIf="( formErrors.name ) && formErrors.name.status">{{formErrors.name.msg}}</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" ngControl="room" placeholder="Enter room number">
+                        <br>
+                        <span *ngIf="( formErrors.room ) && formErrors.room.status">{{formErrors.room.msg}}</span>
+                    </div>
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+
+            <form *ngIf="inEditMode" (ngSubmit)="btnSaveEditedData(editFormControlGroup.value)" [ngFormModel]="editFormControlGroup">
+                <input type="hidden" ngControl="id">
+                <br>
+                <input type="text" ngControl="date" placeholder="Enter date">
+                <br>
+                <input type="text" ngControl="name" placeholder="Enter name">
+                <br>
+                <input type="text" ngControl="room" placeholder="Enter room number">
+                <br>
+                <button type="submit">SAVE</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+           <div class="col-sm-6">
+                <span *ngIf="showLoading">LOADING....</span>
+                    <span *ngIf="showServerError">Error! Server refused to communicate back!</span>
+                    <div class="single-booking" *ngFor="#booking of allRoomBookings">
+                        
+                        ID: {{booking.id}} <br>
+                        Date: {{booking.date}} <br>
+                        Name: {{booking.name}} <br>
+                        Room: {{booking.room}} <br>
+                        <button (click)="btnDeleteBooking(booking.id)">DELETE</button>  
+                        <button (click)="btnEditBooking(booking)">EDIT</button>           
+                    </div>
+            </div>
+            <div class="col-sm-6">
+                <h1>POSTS</h1>
+                <ol>
+                    <li *ngFor="#post of posts">{{post.title}} <button (click)="deletePost(post.id)">Delete</button></li>
+                </ol>
+            </div>        
+    </div>
+</div>
+

@@ -1,0 +1,214 @@
+<div class="main-body-wrapper">
+    <div class="cart-holder">
+        <div class="container">
+            <div class="cart-wrapper" *ngIf=showCartItems>
+                <span class="show-hide-cart-icon">
+                    <span class="total-num-cart-items">{{ cartItemsSelected.length }}</span>
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 
+                </span>
+                
+                <div class="cart-items-wrapper">
+                    <div class="cart-items">
+                        <div *ngFor="#content of cartItemsLimit(cartItemsSelected)">
+                            <div class="purchase">
+                                <div class="row">
+                                    
+                                        <div class="col-sm-8">
+                                            <section class="checkout-title">{{content.menuItemtTitle}}</section>
+                                            <section class="checkout-price">{{content.menuItemPrice}}</section>
+                                        </div>
+                                    
+                                    <div class="col-sm-4">
+                                        <img src="app/assets/images/{{content.menuItemPic}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="full-cart-link">
+                        <section>showing 4 out of 10 items. <span id="view-all" (click)="clickedViewAll()">View all</span></section>
+                    </div>
+                    <div class="cart-sub-totals">
+                        <section><span class="cart-red">Subtotals:</span> GBP 234.00</section>
+                    </div>
+                    <div class="col-sm-12 cart-footer">
+                        <a class="col-sm-6 c-f-left" href="">View Cart</a>
+                        <a class="col-sm-6 c-f-right" href="">Checkout</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+<restaurant-header [headerVars]="pageHeaderVars"></restaurant-header>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6" *ngFor="#content of pageContent.introduction">
+                    <div class="introduction">
+                        <h4>{{content.title}}</h4>
+                        <p>{{content.content}}</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 title">
+            <h1><span class="bold">CLICK</span> <span class="thin">TO ADD TO chart</span></h1>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<h1 [innerHTML]="badCode"></h1>
+<button (click)="hackedIt()">Click</button>-->
+        
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" *ngFor="#content of pageContent.menuItems">
+            <div class="menu-details-wrapper">
+                <div class="row">
+                    <div class="col-sm-9 sample">
+                        <div class="pic-and-description" (dblclick)="addMenuItemToChart(content.menuID)">
+                            <img src="app/assets/images/menu1.jpg" alt="">
+                            <h2>{{content.menuItemtTitle}}</h2>
+                            <span>{{content.menuItemCaption}}</span>
+                            
+                            <!--<div [innerHTML]="content.description"></div>-->
+                            <!--{{content.description}}-->
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2> 
+                            <span *ngIf="content.initialPrice" class="old-price" [innerHTML]="formatPrice (content.initialPrice, content.currency)"></span> 
+                            <span  class="current-price {{ ( content.initialPrice ) ? 'red-font' : null }}" [innerHTML]="formatPrice ( content.menuItemPrice, content.currency )"></span>
+                        </h2>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+
+<!--<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="{{(showHeader) ? 'bgBlack' : null}}">dfgdfgf dfgfgdgdgdfgdfgghdfhhfhgfg dfghhf</p>
+            {{calc}}
+            <div class="my-custom-holder" style="width:300px;height:200px;display:block;float:left;overflow:auto;" (scroll)="isScrolling()">
+                <p>You can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possibleYou can power your own online ordering system with the free Woocommerce Plugin. You will receive an E-Mail for each order and can change the payment settings to accept anything from credit card, to paypal to bank deposit. The number of products you can add have no limit. Even variations are possible</p>
+            </div>
+        </div>
+    </div>
+</div>-->
+    
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 title">
+            <h1><span class="bold">are you</span> <span class="thin">done?</span></h1>
+            <button class="checkout" (click)="btnCheckout()">Show Chart & Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!--
+<div>
+    <ol>
+        <li *ngFor="#data of pageContent.colleges">
+            {{data.title}}
+            <ol>
+                <li *ngFor="#dept of data.depts">
+                    {{dept.name}} {{dept.staff}} 
+                </li>
+            </ol>
+            <p>{{data.dean.name}}</p>
+            <ol>
+                <li *ngFor="#class of data.dean.inchargeofClasses">
+                    {{class}}
+                </li>
+            </ol>
+        </li>
+    </ol>
+</div>-->
+
+<!--<p>
+    I have read a book by {{bookDetails.author}} titled {{bookDetails.title}} with {{bookDetails.chapters}} chapters and {{bookDetails.pages}} pages
+</p>
+
+<h1>Univeristy of Princeton</h1>
+<h6>No of Departments: {{univeristyPrinceton.numOfDepartments}}</h6>
+<p>The dean of this university is {{univeristyPrinceton.dean.name}} with the age of {{univeristyPrinceton.dean.age}}</p>
+<div>
+    <p>The departments are :</p>
+    <ol>
+        <li *ngFor="#dept of univeristyPrinceton.departments">{{dept.name}} {{dept.staffNum}}</li>
+    </ol>
+
+</div>
+
+<div>
+    <p>The wifi hotspots are:</p>
+    <ol>
+        <li *ngFor="#hotspot of univeristyPrinceton.wifiHotspots">{{hotspot}}</li>
+    </ol>
+</div>-->
+
+
+<!--<div class="menu-details-wrapper" *ngFor="#content of pageContent.menuItems">
+    <div class="col-sm-11">
+        <div class="pic-and-description">
+            <img src="app/assets/images/menu1.jpg" alt="">
+            <h2>{{content.menuItemtTitle}}</h2>
+            <span>{{content.menuItemCaption}}</span>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <h2>{{content.menuItemPrice}}</h2>
+    </div>
+</div>
+
+
+<div *ngFor="#content of pageContent.menuItems">
+    <h2>{{content.menuItemtTitle}}</h2>
+    <section>{{content.menuItemCaption}}</section>
+</div>-->
+
+
+<!--<div class="container">
+    <div class="row">
+        <div class="delivery">
+            <h1><span class="thin-text">{{menuTitleThin}}</span> {{menuTitleBold}}</h1>
+
+                <div *ngFor="#menuItem of menuData.menuItems" class="col-sm-6">
+                    <div class="menu-item-wrapper">                   
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h2>Menu Item{{menuItem.menuItemtTitle}}</h2>
+                                <section>{{menuItem.menuItemCaption}} </section>
+                            </div>
+                            <div class="col-sm-3">
+                                <h6> Menu Price{{ formatPrice ( menuItem.menuItemPrice ) }}$</h6>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+
+        </div>
+
+    </div>
+</div>-->
+
+<restaurant-footer></restaurant-footer>
+</div>

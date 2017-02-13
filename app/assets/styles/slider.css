@@ -1,0 +1,54 @@
+
+.slider-holder{
+    width: 100%;
+    height: 500px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.slide-main-holder{
+    width: 100%;
+    height: auto;
+    display: block;
+    float: left;
+    position: relative;
+    z-index:100;
+}
+
+.slider-holder div.slide img{
+    z-index: 2;
+    width:100%;
+}
+
+.slider-holder div.slide div.slide-caption{
+    position: absolute;
+    z-index: 3000;
+    top: 20%;
+    left:25%;
+
+
+}
+
+.slider-holder div.slide div.slide-caption h1{
+    font-weight: bold;
+    color: #ebe8e2;
+    font-size: 4em;
+    
+}
+.slider-holder div.slide div.slide-caption h1 span.thin-heading{
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+.slider-holder div.slide div.slide-caption section{
+    color: #ebe8e2;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+

@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <form class="restaurant-form"  [ngFormModel]="reservationForm" (ngSubmit)="processReservation(reservationForm.value)" >
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="text" ngControl="name" placeholder="Enter your full name." #name="ngForm" />
+                        <span class="error" *ngIf="name.errors && (!name.pristine)">Enter the correct name.</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" ngControl="email" placeholder="Enter your email." #email="ngForm" /> 
+                        <span class="error" *ngIf="email.errors?.pattern">Enter the correct email address.</span>
+                                               
+                    </div>
+                    <div class="col-sm-3">                        
+                        <input class="datepicker" type="text" ngControl="date" placeholder="Enter the reservation date in MM/DD/YYYY" #date="ngForm" />
+                        <span class="error" *ngIf="date.errors && (!date.pristine)">Enter the correct date.</span>                                                
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!--<input type="text" ngControl="time" placeholder="Enter the reservation time in military time" />-->
+                        <div class="input-group bootstrap-timepicker timepicker">
+                            <input id="timepicker2" type="text" class="form-control input-small" name="time" ngControl="time" #time="ngForm" />
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-time"></i>
+                            </span>
+                        </div>
+                        <span class="error" *ngIf="time.errors && (!time.pristine)">Enter the correct time.</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <!--<input type="number" min="1" max="8" ngControl="seats" #seats="ngForm" />-->
+                        <select ngControl="seats" #seats="ngForm">
+                            <option value="">--SELECT SEAT NUMBER--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <span class="error" *ngIf="seats.errors?.seats && seats.dirty">Please select seat numbers more than 8</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" ngControl="table" placeholder="Enter your desired table." #table="ngForm" />
+                        <span class="error" *ngIf="table.errors?.table">Enter the table.</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="submit" [disabled]="!reservationForm.valid" >{{(isInEditMode) ? "EDIT":"REGISTER"}}</button>
+                        <!--<button type="submit">Book Now</button>-->
+                    </div>
+                </div>
+            </div>
+        </form>        
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+             <div class="row">
+                 <div class="" *ngFor="#reservation of allReservations" >
+                    <div class="col-sm-6 single-reservation">
+                        <h4>{{reservation.name}}</h4>
+                        <div class="reservation-date-time">
+                            <span><i class="fa fa-calendar-check-o" aria-hidden="true"></i>{{reservation.date}}</span>
+                            <span><i class="fa fa-clock-o" aria-hidden="true"></i>{{reservation.time}}</span>
+                        </div>
+                        <div class="reservation-seat-table">
+                            <span>Seat Number: {{reservation.seats}}</span>
+                            <span>Table Number: {{reservation.table}}</span>
+                            <span>Email: {{reservation.email}}</span>
+                        </div>
+
+                        <div id="dialog-{{reservation.id}}" class="confirm-delete-dialog-box">
+                            <div class="row">                            
+                                <div class="col-sm-12">
+                                    <span>Are you sure you want to delete?</span>
+                                    <button (click)="checkDialogBoxSelection(true, selectedID)">YES</button>
+                                    <button (click)="checkDialogBoxSelection(false)">NO</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reservation-actions">
+                            <button class="edit" (click)="editReservation(reservation.id)">EDIT</button>
+                            <button class="delete" (click)="deleteReservation(reservation.id)">DELETE</button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+

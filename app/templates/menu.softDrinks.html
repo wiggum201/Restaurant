@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="soft-drink">
+                <h1><span class="thin-text">{{menuTitleThin}}</span>{{menuTitleBold}}</h1>
+                <div *ngFor="#menuItem of menuData.menuItems" class="col-sm-4">
+                    <div class="menu-item-wrapper">                   
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>{{menuItem.menuItemtTitle}}</h2>
+                                <section>{{menuItem.menuItemCaption}}</section>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6>{{ formatPrice ( menuItem.menuItemPrice ) }}$</h6>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+    </div>
+</div>

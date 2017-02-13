@@ -1,0 +1,122 @@
+.nav-holder {
+    width:100%;
+    height:auto;
+    display:block;
+    float:left;
+    position: absolute;
+    top:0;
+    left:0;
+    color:#fff;
+    background-color:rgba(255, 255, 255, 0.2);
+    padding: 0.1em 0 0.1em 0;
+    border-bottom: 0.5px solid #ccc;
+    z-index: 1000;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+    display: block;
+    float: left;
+
+}
+ul.main-navigation{
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    
+    float: left;
+    display: block;
+}
+
+ul.main-navigation li{
+    display: inline-block;
+    list-style: none;
+    margin: 2.5em 1.5em 0 0;
+    
+}
+
+ul.main-navigation li a{
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+    border-bottom: 2px solid transparent;
+     padding: 1.5em 0;
+
+
+}
+
+ul.special-links {
+    height: auto;
+    width: auto;
+    float: left;
+    
+    display: block;
+
+}
+
+ul.special-links li{
+    display: inline-block;
+    float: left;
+    border: 2px solid #fff;
+    padding: 0.5em;
+    margin: 2em 0.5em 0 0;
+
+}
+
+ul.special-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul.main-navigation li a:hover, ul.main-navigation li a.current{
+    border-bottom: 2px solid #fff;   
+    transition: 0.5s;
+}
+
+ul.social-media-links{
+    display: block;
+    height:auto;
+    width: auto;
+    float: left;
+}
+
+ul.social-media-links li{
+    display:inline-block;
+    margin: 2em 0.5em 0 0;
+}
+
+
+
+ul.social-media-links li a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+ 
+    
+}
+
+ul.social-media-links li a i{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 0.35em;
+
+}
+
+ul.social-media-links li a:hover{
+    border-color: #2b2822;
+    background-color: #2b2822;
+    color: #fff; 
+    transition: 0.5s;
+    
+    
+}
+

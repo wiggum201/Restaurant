@@ -1,0 +1,26 @@
+<div class="row">
+    <!--[ngFormModel matches the form instance on html variable-->
+    <form class="restaurant-form" [ngFormModel]="formInstance" (ngSubmit)="processForm(formInstance.value)">
+        <div class="col-sm-12">
+            <input type="text" ngControl="fName" placeholder="Enter student first name." />
+        </div>
+        <div class="col-sm-12">
+            <input type="text" ngControl="mName" placeholder="Enter student first name." />
+        </div>
+        <div class="col-sm-12">
+            <input type="text" ngControl="lName" placeholder="Enter student first name." />
+        </div>
+        <div class="col-sm-12">
+            <button type="submit">SUBMIT EDITED INFO</button>   
+        </div>        
+    </form>
+
+    <div class="col-sm-12">
+        <div *ngFor="#employee of employees">                                      
+                <li *ngIf="employee.visibility">
+                    First Name: {{employee.fName}}, Middle Name: {{employee.mName}}, LastName: {{employee.lName}}
+                    <button (click)="btnClickEdit(employee.id)" >Edit</button>  
+                </li>
+        </div>
+    </div>
+</div>

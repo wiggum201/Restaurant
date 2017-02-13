@@ -1,0 +1,11 @@
+<restaurant-header [headerVars]="pageHeaderVars"></restaurant-header>
+<section *ngFor="#menu of allMenus">
+    <menu-of-day-component *ngIf="menu.component=='menu-of-day-component'" [menuData]="menu"></menu-of-day-component>
+    <breakfast-component *ngIf="menu.component=='breakfast-component'" [menuData]="menu"></breakfast-component>
+    <lunch-time-component *ngIf="menu.component=='lunch-time-component'" [menuData]="menu"></lunch-time-component>
+    <wine-selection-component *ngIf="menu.component=='wine-selection-component'" [menuData]="menu"></wine-selection-component>
+    <soft-drinks-selection-component *ngIf="menu.component=='soft-drinks-selection-component'" [menuData]="menu"></soft-drinks-selection-component>
+    
+
+</section>
+<restaurant-footer></restaurant-footer>

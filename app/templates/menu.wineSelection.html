@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="wine-selection">
+            <h1><span class="thin-text">{{menuTitleThin}}</span>{{menuTitleBold}}</h1>
+        
+        <div class="col-sm-6">
+            <img src="app/assets/images/{{menuData.imgSrc}}" alt="">
+        </div>
+
+            <div class="col-sm-6">
+                
+                    
+                        
+                        <!--REPETITIVE MENU ITEM-->
+                            <div *ngFor="#menuItem of menuData.menuItems" class="col-sm-12">
+                                <div class="menu-item-wrapper">                   
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <h2>{{menuItem.menuItemtTitle}}</h2>
+                                            <section>{{menuItem.menuItemCaption}}</section>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h6>{{ formatPrice ( menuItem.menuItemPrice ) }}$</h6>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div>
+                            <!--END OF REPETITIVE MENU ITEM-->
+                        
+                
+            </div>
+    </div>     
+    </div>
+</div>

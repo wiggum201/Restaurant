@@ -1,0 +1,37 @@
+
+<form id="contact-form" class="restaurant-form" [ngFormModel]="contactUsRequest" (ngSubmit)="processContactPage(contactUsRequest.value)" >
+       <div class="col-sm-6">
+           <input type="text" ngControl='visitorName' placeholder="Enter your full name" #visitorName="ngForm" />
+             <span class="error" *ngIf="visitorName.errors && ( ! visitorName.pristine )">Errors found!</span>
+       </div>
+       <div class="col-sm-6">
+           <input type="email" ngControl='visitorEmail' placeholder="Enter your email address" #visitorEmail="ngForm" />
+           <span class="error" *ngIf="visitorEmail.errors?.pattern">Please enter your email correctly.</span>
+       </div>
+       <div class="col-sm-6">
+        <select ngControl="subject" #subject="ngForm">
+               <option value="">--SELECT AN OPTION--</option>
+               <option value="Book a reservation">Book A Reservation</option>
+               <option value="General Support">General Support</option>
+               <option value="Delivery">Delivery</option>
+           </select>
+           <span class="error" *ngIf="subject.errors && (subject.dirty)">Please enter your selection correctly.</span>
+       </div>       
+       <div class="col-sm-6">
+           <input type="text" ngControl='date' placeholder="Enter date" #date="ngForm"/>
+           <span class="error" *ngIf="date.errors?.pattern">Please enter the date correctly.</span>
+       </div>
+       <div class="col-sm-12">
+           <input type="text" ngControl='quantity' placeholder="Enter quantity" #quantity="ngForm" />
+           <span class="error" *ngIf="quantity.errors?.quantity">Please enter the quantity correctly.</span>
+       </div>
+       <div class="col-sm-12">
+           <textarea ngControl="visitorMessage" placeholder="Enter your message." #visitorMessageVar="ngForm"></textarea>
+           <span class="error" *ngIf="visitorMessageVar.errors?.pattern">Please provide a message above.</span>
+       </div>
+       <div class="col-sm-12">
+           <button type="submit" [disabled]="!contactUsRequest.valid">SUBMIT</button>
+       </div>
+</form>
+
+

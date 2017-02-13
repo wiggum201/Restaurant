@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <!--adding ngFormModel means we can now control html form-->
+        <!--[ngFormModel] tp tell html that this is an inbuilt model form not a template form-->
+        <form class="restaurant-form" [ngFormModel]="registration" (ngSubmit)="processRegistrationForm(registration.value)" >
+            <div class="col-sm-12">
+                <input type="text" ngControl="name" placeholder="Enter your full name."/>
+            </div>
+            <div class="col-sm-12">
+                <!--name for entire form ngControl to control each property of form. ngControl made for angular2 framework-->
+                <input type="text" ngControl="email" placeholder="Enter your email address." />
+            </div>
+            <div class="col-sm-12">
+                <!--name for entire form ngControl to control each property of form. ngControl made for angular2 framework-->
+                <input type="text" ngControl="age" placeholder="Enter your age." />
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" [disabled]="!registration.valid" >SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <form class="restaurant-form" [ngFormModel]="studentRegistrationForm" (ngSubmit)="submitStudentRegistrationForm(studentRegistrationForm.value)" >
+            <div class="col-sm-3">
+                <input type="text" ngControl="fName" placeholder="Enter your first name." />
+            </div>
+            <div class="col-sm-3">
+                <input type="text" ngControl="lName" placeholder="Enter your last name." />
+            </div>
+            <div class="col-sm-3">
+                <select ngControl="major">
+                    <option value="">--Select Major--</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="History">History</option>
+                    <option value="Math">Math</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <input type="text" ngControl="age" placeholder="Enter your age" #ageVar="ngForm" />
+                
+                
+            </div>
+            <div class="col-sm-12">
+                <textarea ngControl="bio" placeholder="Enter your student bio."></textarea>
+            </div>
+            <div class="col-sm-3">
+                <button type="submit" [disabled]="!studentRegistrationForm.valid">REGISTER</button>
+            </div>
+        </form>
+    </div>
+</div>

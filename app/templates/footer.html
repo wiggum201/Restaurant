@@ -1,0 +1,27 @@
+<div class="footer-holder">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="#branch of branches" class="col-sm-3">
+                <h4>{{branch.office}}</h4>
+                <ul>
+                    <li>{{branch.street}}</li>
+                    <li>{{branch.city}}</li>
+                    <li class="phone-number"><a href="tel:(555) 389 976">{{branch.phoneNumber}}</a></li>
+                    <li><a href="mailto:detroid@enfold-restaurant.com">{{branch.email}}</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="copyright-holder">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>© Copyright - <a href="">Enfold Restaurant Demo</a> - <a href="">Enfold Theme by Kriesi</a> </p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+
+
+
+<div class="container">
+    <div class="row">
+
+        <form id="school-form" class="college-form" (ngSubmit)="findCollegeInfo(collegeInfo.value)" #collegeInfo="ngForm">
+            <div class="col-sm-4">
+                <input type="text" ngControl="collegeName" placeholder="Enter college name" />
+            </div>
+            <div class="col-sm-4">
+                <input type="number" ngControl="numberStudents" placeholder="Enter number of students" />
+            </div>
+            <div class="col-sm-4">
+                <input type="number" ngControl="numberDepartments" placeholder="Enter number of departments" />
+            </div>
+            <div class="col-sm-12">
+                <select ngControl="isIvyLeagueSchool">  
+                    <option value="false">--SELECT STATUS--</option>            
+                    <option value="true">IVY LEAGUE</option>
+                    <option value="false">NOT IVY LEAGUE</option>
+                </select>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit">SUBMIT</button>
+                <span *ngIf="displayFeedbackInfoTrue" class="feedback-message">
+                    The college was updated successfully.
+                </span>
+                <span *ngIf="displayFeedbackInfoFalse" class="feedback-message error">
+                    The college was not updated successfully.
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="colleges-output" *ngFor="#college of allColleges">
+            <div class="col-sm-3">
+                <!--college is from #college and .name is from component/service-->
+                {{college.name}}
+            </div>
+            <div class="col-sm-3">
+                {{college.numStudents}}
+            </div>
+            <div class="col-sm-3">
+                {{college.numDepartments}}
+            </div>
+            <div class="col-sm-3">
+                {{(college.isIvyLeague) ? "Ivy League School" : "Not an Ivy School" }}
+            </div>
+        </div>
+    </div>
+</div>

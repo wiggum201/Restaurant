@@ -1,0 +1,42 @@
+form.college-form {
+    width:100%;
+    height: auto;
+    display: block; 
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+    float: left;
+}
+form.college-form input[type="text"], form.college-form input[type="number"], form.college-form select  {
+    width: 100%;
+    height: 50px;
+    float: left;
+    display: block;
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    margin: 0 0 2em 0;
+}
+
+
+
+form.college-form button{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    border: none;
+    padding: 1em 0;
+    box-sizing: border-box;
+    background-color: #000033;
+    color: #DAA520;
+    font-weight: bold;
+}
+
+.school-form {width:100%;height:auto;float:left;display:block;margin:0 0 0.2em 0; padding:0.5em;box-sizing:border-box;background-color:#333;color:#fff;}
+
+span.feedback-message{
+    color: green;
+}
+span.feedback-message.error {color:red;}
